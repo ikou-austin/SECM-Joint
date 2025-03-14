@@ -23,5 +23,46 @@ Speech anti-spoofing aims to distinguish real speech from fake speech generated 
 ## ⚙️ Environment Requirements
 To reproduce the experiments, install the following dependencies:
 
+## 🚀 Installation & Usage
+### **1. Clone the repository**
 ```bash
+git clone https://github.com/ikou-austin/SECM-Joint.git
+cd SECM-Joint
 pip install -r requirements.txt
+```
+
+### **2. Prepare the dataset**
+Download the dataset and place it under the `data/` directory.
+
+### **3. Train the model**
+```bash
+python train.py --config config.yaml
+```
+
+### **4. Evaluate the model**
+```bash
+python evaluate.py --checkpoint checkpoints/model.pth
+```
+
+## 📊 Experimental Results
+| Model | EER (%) | Min t-DCF |
+|--------|--------|-----------|
+| Baseline | X.XX | X.XX |
+| Proposed | **X.XX** | **X.XX** |
+
+More detailed results can be found in the `results/` folder.
+
+## 📖 Citation
+If you find this work useful, please cite:
+```bibtex
+@article{wang2025secm-joint,
+  title={Enhancing the Robustness of Speech Anti-spoofing Countermeasures through Joint Optimization and Transfer Learning},
+  author={Yikang Wang, Xingming Wang, Chee Siang Leow, Qishan Zhang, Ming Li, Hiromitsu Nishizaki},
+  journal={},
+  year={2025}
+}
+```
+
+## 📜 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
