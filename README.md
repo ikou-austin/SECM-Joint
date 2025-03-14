@@ -12,7 +12,7 @@ Speech anti-spoofing aims to distinguish real speech from fake speech generated 
 
 ## 📜 Paper Information
 - **Title:** Enhancing the Robustness of Speech Anti-spoofing Countermeasures through Joint Optimization and Transfer Learning
-- **Authors:** Yikang Wang, [Xingming Wang, Chee Siang Leow, Qishan Zhang, Ming Li, Hiromitsu Nishizaki]
+- **Authors:** Yikang Wang, Xingming Wang, Chee Siang Leow, Qishan Zhang, Ming Li, Hiromitsu Nishizaki
 - **Submitted to Journal:** [IEICE Transactions on Information and Systems] (2025) 
 - **Paper Link:** [arXiv / DOI / Publisher Link]  
 
