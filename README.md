@@ -4,7 +4,7 @@ This repository contains the code and experimental data for the paper:
 
 **"Enhancing the Robustness of Speech Anti-spoofing Countermeasures through Joint Optimization and Transfer Learning"**
 
-[![Paper](https://img.shields.io/badge/arXiv-Paper-red)](https://arxiv.org/xxxx)  <!-- 替换链接 -->
+[![DOI](https://img.shields.io/badge/DOI-10.1587/transinf.2025EDP7044-blue)](https://doi.org/10.1587/transinf.2025EDP7044)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ## 🔥 Introduction
@@ -14,14 +14,31 @@ Speech anti-spoofing aims to distinguish real speech from fake speech generated 
 - **Title:** Enhancing the Robustness of Speech Anti-spoofing Countermeasures through Joint Optimization and Transfer Learning
 - **Authors:** Yikang Wang, Xingming Wang, Chee Siang Leow, Qishan Zhang, Ming Li, Hiromitsu Nishizaki
 - **Submitted to Journal:** [IEICE Transactions on Information and Systems] (2025) 
-- **Paper Link:** [arXiv / DOI / Publisher Link]  
 
 ## 📂 Dataset and Experimental Data
-- **Dataset:** [ASVspoof 2019/handmake nosie test data]  
-- **Experimental Results:** Available in the `results/` folder.  
+- ### TODO
+- Upload noisy test data and corresponding instructions.
+
+
 
 ## ⚙️ Environment Requirements
 To reproduce the experiments, install the following dependencies:
+
+- Python ≥ 3.8; PyTorch with CUDA (recommended) and matching Torchaudio
+- Other dependencies: see `requirements.txt`
+
+```bash
+# Create and activate conda env
+conda create -n secm python=3.8
+conda activate secm
+
+# Install PyTorch + Torchaudio
+# CUDA 11.8
+conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+
+# Project dependencies
+pip install -r requirements.txt
+```
 
 ## 🚀 Installation & Usage
 ### **1. Clone the repository**
@@ -34,6 +51,12 @@ pip install -r requirements.txt
 ### **2. Prepare the dataset**
 Download the dataset and place it under the `data/` directory.
 
+Expected files (ASVspoof 2019 LA example):
+- `data/spoof19LA/train/{wav.scp, utt2label}`
+- `data/spoof19LA/dev/{wav.scp, utt2label}`
+- `data/spoof19LA/eval/wav.scp`
+- `data/aug/musan_*.txt`
+  
 ### **3. Train the model**
 ```bash
 python train.py --config config.yaml
@@ -44,22 +67,19 @@ python train.py --config config.yaml
 python evaluate.py --checkpoint checkpoints/model.pth
 ```
 
-## 📊 Experimental Results
-| Model | EER (%) | Min t-DCF |
-|--------|--------|-----------|
-| Baseline | X.XX | X.XX |
-| Proposed | **X.XX** | **X.XX** |
-
-More detailed results can be found in the `results/` folder.
 
 ## 📖 Citation
 If you find this work useful, please cite:
 ```bibtex
-@article{wang2025secm-joint,
+@article{Yikang WANG20252025EDP7044,
   title={Enhancing the Robustness of Speech Anti-spoofing Countermeasures through Joint Optimization and Transfer Learning},
-  author={Yikang Wang, Xingming Wang, Chee Siang Leow, Qishan Zhang, Ming Li, Hiromitsu Nishizaki},
-  journal={},
-  year={2025}
+  author={Yikang WANG and Xingming WANG and Chee Siang LEOW and Qishan ZHANG and Ming LI and Hiromitsu NISHIZAKI},
+  journal={IEICE Transactions on Information and Systems},
+  volume={advpub},
+  number={ },
+  pages={2025EDP7044},
+  year={2025},
+  doi={10.1587/transinf.2025EDP7044}
 }
 ```
 
